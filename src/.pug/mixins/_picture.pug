@@ -1,0 +1,7 @@
+- var imagePath = '/images/'
+
+//- +picture('hoge', 'hogeの画像')
+mixin picture(src, alt = '', unit = 'png')
+  picture
+    source(srcset=`${imagePath + src}.webp` type='image/webp' alt=alt)
+    img(src=`${imagePath + src}.${unit}` alt=alt)
